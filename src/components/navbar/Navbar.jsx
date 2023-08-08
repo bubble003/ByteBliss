@@ -14,37 +14,26 @@ const Navbar = () => {
     },
     {
       id: 2,
-      title: "Portfolio",
-      url: "/portfolio",
-    },
-    {
-      id: 3,
       title: "Blog",
       url: "/blog",
     },
     {
-      id: 4,
-      title: "About",
-      url: "/about",
-    },
-    {
-      id: 5,
+      id: 3,
       title: "Contact",
       url: "/contact",
     },
     {
-      id: 6,
+      id: 4,
       title: "Dashboard",
       url: "/dashboard",
     },
   ];
-  
+
   const session = useSession();
   return (
     <div className={styles.container}>
       <Link href="/" className={styles.logo}>
-        {" "}
-        XOXO{" "}
+        ByteBliss
       </Link>
       <div className={styles.links}>
         <DarkModeToggle />
@@ -53,14 +42,11 @@ const Navbar = () => {
             {link.title}
           </Link>
         ))}
-        {session.status === "authenticated" && 
-          (<button
-            className={styles.logout}
-            onClick={signOut}
-          >
+        {session.status === "authenticated" && (
+          <button className={styles.logout} onClick={signOut}>
             Logout
-          </button>)
-        }
+          </button>
+        )}
       </div>
     </div>
   );

@@ -9,11 +9,11 @@
   justify-content: space-between;
 }
 
-.title{
+.title {
   font-size: 40px;
 }
 
-.desc{
+.desc {
   font-size: 18px;
   font-weight: 300;
 }
@@ -37,6 +37,8 @@
 
 .image {
   object-fit: cover;
+  margin: 25px;
+  border-radius: 10px;
 }
 
 .content {
